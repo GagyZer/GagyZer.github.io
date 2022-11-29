@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="icon" type="image/png" href="index.png" />
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WOOGANG</title>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <h1>WOO</h1>
+            <a onClick="MenuMobile()">
+                <img src="assets/img/icon.png" alt="icon">
+            </a>
+            <ul class="nonactive" id="ulnav">
+                <li> <a  href="index.html">Acceuil</a></li>
+                <li> <a  href ="present.html">Presentation</a></li>
+                <li> <a  href="contact.html">Contact</a></li>                 
+                <li><a href="">Blog</a></li>
+                <li><a href="">Abonné</a></li>
+                <li><a href="">Statistiques</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="section-form">
+                <form class="formulaire">
+                    <label for=”subject”>Sujet:</label>
+                    <input id=”subject” type=”text” name=”Sujet”>
+
+                    <label for=”username”>Nom:</label>
+                    <input id=”username” type=”text” name=”username”>
+
+                    <label for="name">Prenom:</label>
+                    <input id="name" type="text" name="name">
+
+                    <label for=”mail”>Mail:</label>
+                    <input id=”mail” type=”text” name=”mail”>
+
+                    <label for=content>Message:</label>
+                    <textarea id=”content” name=content></textarea>
+
+                    <button type=”submit”>Envoyer</button>
+
+                </form>
+        </section>
+
+    </main>
+    <footer>
+    <div class="copyright">
+        </div>
+    </footer>
+    <script src="app.js"></script>
+</body>
+
+</html>
