@@ -1,0 +1,434 @@
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+/* INDEX STYLE */
+header {
+    /* position: fixed; */
+    background-color: rgb(228, 228, 228);
+    width: 100%;
+    top: 0;
+    margin-top: -20px;
+    left: 0;
+    list-style: none;
+}
+
+
+
+h1 {
+    margin: 20px;
+    text-align: start;
+    font-style: unset;
+    font-family: 'Permanent Marker', cursive;
+    color: white;
+    font-size: 50px;
+    text-shadow: 0.1em 0.1em rgb(134, 134, 134);
+
+}
+
+/* Menu Déroulant*/
+
+.nav{
+    display:flex;
+    justify-content: center;
+    text-align: center;
+}
+
+.nav li{
+    display : inline;
+    position:relative;
+}
+
+
+
+.nav li ul{
+    visibility: hidden;
+    position: absolute;
+    background-color: rgb(228, 228, 228);;
+    border-radius: 5 px;
+    width:80px;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    
+}
+
+li a:hover{
+    background-color: rgb(71, 70, 71);
+    transition: .5s;
+}
+
+
+
+.nav li ul li{
+width: 150px;
+}
+
+.nav li ul li a{
+    margin-left: -100px;
+    /* transition: .3s; */
+}
+
+.nav li:hover > ul,.nav li ul li:hover{
+    visibility: visible;
+}
+
+
+
+main {
+    display: flex;
+    justify-content: center;
+}
+
+li {
+    margin: 15px;
+
+}
+
+li a {
+    background-color: rgb(255, 255, 255);
+    color: rgb(134, 134, 134);
+    padding: 3px 8px;
+    border-radius: 15px;
+    text-decoration: none;
+
+}
+
+.montagne {
+    height: 150px;
+    border-radius: 20px;
+    transition: .4s;
+
+}
+
+.montagne:hover{
+    transform: scale(1.1);
+}
+
+
+
+
+
+
+section {
+    display: flex;
+    justify-content: center;
+}
+
+.grille {
+    width: 700px;
+    margin-top: 150px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-gap: 250px;
+
+}
+
+.grille p{
+    margin-bottom: 20px;
+}
+
+footer {
+    list-style: none;
+    margin-top: 150px;
+    background-color: rgb(228, 228, 228);
+    /* width: 100%; */
+    left: 0;
+    justify-content: center;
+    padding-bottom: 15px;
+
+}
+
+footer ul {
+    list-style: none;
+    text-align: center;
+}
+
+
+
+
+
+
+a.active {
+    background-color: rgb(187, 255, 0);
+}
+
+
+
+/* CONTACT STYLE */
+
+
+
+.formulaire {
+    width: 500px;
+    height: 500px;
+    border: 3px solid black;
+    margin-top: 100px;
+    color: rgb(0, 0, 0);
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(6, 1fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    align-items: center;
+}
+
+input, textarea {
+    grid-column: span 2;
+    margin-right: 20px;
+    max-width: 90%;
+    min-width: 90%;
+}
+
+label {
+    text-align: center;
+    text-decoration: underline;
+}
+
+form button {
+    grid-column: 2;
+}
+
+header img {
+    display: none;
+}
+
+
+/* SUBSCRIBE PAGE */
+
+.main-sub{
+    text-align: center;
+    width: 375px;
+    height:700px;
+    display: grid;
+    border: 3px solid black;
+    margin-top: 100px;
+    color: rgb(0, 0, 0);
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(14, 1fr);
+    /* grid-column-gap: 0px;
+    grid-row-gap: 0px; */
+}
+
+/* ARTICLE CONTENU */
+
+.A1{
+    display: flex ;
+    justify-content: center;
+}
+.article{
+    text-align: center;
+}
+
+.article h2{
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 65px;
+    margin-bottom: 50px;
+    border: 3px solid black;
+}
+
+.article p{
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.article img{
+    height: 300px;
+    margin-bottom: 50px;
+
+}
+
+.active p{
+    
+    height: 600px;
+}
+
+
+/* ASIDE ARTICLE */
+
+aside{
+    /* position: fixed; */
+    background-color: rgb(134, 134, 134);
+    height:600px;
+    width: 400px;
+    min-width: 150px;
+    
+    
+}
+
+
+section{
+    display: block;
+}
+
+
+
+
+aside section ul li a {
+    background-color: white;
+}
+
+
+
+@media (max-width: 700px) {
+    header {
+        background-color: rgb(75, 75, 75);
+    }
+
+    body {
+        width: 100vw;
+    }
+
+    .nav{
+        flex-direction: column;
+        text-align: center;
+        margin-top: 40px;
+    }
+    .nav li ul{
+        display: none;
+    }
+
+    .nonactive {
+        display: none;
+    }
+
+    .active {
+        display: flex;
+    }
+
+    header {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    header img {
+        height: 50px;
+        display: block;
+    }
+
+
+
+
+    .formulaire {
+        width: 300px;
+        height: 300px;
+    }
+
+    .grille {
+        margin-top: 200px;
+        margin-right: 80px;
+        display: block;
+        margin-bottom: 200px;
+        margin-left: 30px;
+
+    }
+    .grille img{
+        margin-bottom: 100px;
+    }
+
+    .grille p{
+        margin-bottom: 20px;
+        position: relative;
+    }
+
+
+    .nav li:hover > ul,.nav li ul li:hover{
+        visibility: hidden;
+    }
+
+    footer{
+        background-color: rgb(75, 75, 75);
+    }
+
+
+    /* ARTICLE */
+/* ARTICLE CONTENU */
+
+.A1{
+    display: block ;
+    justify-content: center;
+}
+
+
+
+.article h2{
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 65px;
+    margin-bottom: 50px;
+    border: 3px solid black;
+}
+
+.article p{
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.article img{
+    height: 150px;
+    margin-bottom: 50px;
+
+}
+
+.active p{
+    
+    height: 600px;
+}
+
+
+/* ASIDE ARTICLE */
+
+aside{
+    /* position: fixed; */
+    background-color: rgb(134, 134, 134);
+    height:225px;
+    width: 800px;
+    min-width: 150px;
+    
+    
+}
+
+
+section{
+    display: block;
+}
+
+
+
+
+aside section ul li a {
+    background-color: white;
+}
+
+/*BLOG*/
+
+img.montagne {
+    height: 100px;
+    border-radius: 20px;
+
+}
+
+.sec p{
+    justify-content: center;
+}
+
+
+section {
+    text-align: center;
+}
+
+.grille {
+    display: block;
+
+}
+
+
+
+
+}
